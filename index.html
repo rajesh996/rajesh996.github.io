@@ -7,36 +7,36 @@
 	
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-	    
+
 	<title>Home | Rajesh Chittampally</title>
 	<link href="home.css" rel="stylesheet" type="text/css" />
 	<style>
 	@media screen and (max-width: 500px){
-	body{
-		display: flex;
-		flex-wrap: wrap;
+		body{
+			display: flex;
+			flex-wrap: wrap;
 		}
-	.nav {
-    z-index: 10;
-    background-color: #fff;
-    width: 300px;
-    position: absolute;
-    /* This trasform moves the drawer off canvas. */
-    -webkit-transform: translate(-300px, 0);
-    transform: translate(-300px, 0);
-    /* Optionally, we animate the drawer. */
-    transition: transform 0.3s ease;
-  }
-  .nav.open {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-  .nav__item {
-    display: list-item;
-    border-bottom: 1px solid #E0E0E0;
-    width: 100%;
-    text-align: left;
-  }
+		.nav {
+			z-index: 10;
+			background-color: #fff;
+			width: 300px;
+			position: absolute;
+			/* This trasform moves the drawer off canvas. */
+			-webkit-transform: translate(-300px, 0);
+			transform: translate(-300px, 0);
+			/* Optionally, we animate the drawer. */
+			transition: transform 0.3s ease;
+		}
+		.nav.open {
+			-webkit-transform: translate(0, 0);
+			transform: translate(0, 0);
+		}
+		.nav__item {
+			display: list-item;
+			border-bottom: 1px solid #E0E0E0;
+			width: 100%;
+			text-align: left;
+		}
 	}
 
 	@media screen and (max-width: 1024px){
@@ -47,26 +47,26 @@
 		}
 
 		.nav {
-    z-index: 10;
-    background-color: #fff;
-    width: 100%;
-    position: absolute;
-    /* This trasform moves the drawer off canvas. */
-    -webkit-transform: translate(-300px, 0);
-    transform: translate(-300px, 0);
-    /* Optionally, we animate the drawer. */
-    transition: transform 0.3s ease;
-  }
-  .nav.open {
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-  .nav__item {
-    display: list-item;
-    border-bottom: 1px solid #E0E0E0;
-    width: 100%;
-    text-align: left;
-  }
+			z-index: 10;
+			background-color: #fff;
+			width: 100%;
+			position: absolute;
+			/* This trasform moves the drawer off canvas. */
+			-webkit-transform: translate(-300px, 0);
+			transform: translate(-300px, 0);
+			/* Optionally, we animate the drawer. */
+			transition: transform 0.3s ease;
+		}
+		.nav.open {
+			-webkit-transform: translate(0, 0);
+			transform: translate(0, 0);
+		}
+		.nav__item {
+			display: list-item;
+			border-bottom: 1px solid #E0E0E0;
+			width: 100%;
+			text-align: left;
+		}
 		#header{
 			max-width: 100%;
 		}
@@ -74,68 +74,427 @@
 			max-width: 100%;
 		}
 	}
-	</style>
-	
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-8141045869878494",
-          enable_page_level_ads: true
-     });
-</script>
+</style>
+
+<style type="text/css">
+	#gallery {font-family: Verdana,sans-serif;margin:0}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+
+
 </head>
 <body>
-<div id="wrapper">
-    
-	<div id="header">
-		<div id="nav"><a href="index.html" class="nav_item">Home</a> | <a href="aboutme.html" class="nav_item">About Me</a> | <a href="hobbies.html" class="nav_item">Hobbies</a> | <a href="gallery.html" class="nav_item">Gallery</a> | <a href="resume.html" class="nav_item">Resume</a> | <a href="contactme.html" class="nav_item">Contact Me</a></div>
-		<div id="bg"></div>
-	</div>
-	
-	<div id="main-content">
-		<!-- <div id="left-column"> -->
-			<div id="logo">
-			WELCOME TO RAJESH'S WEBSITE
-			</div>
-			<div class="box">
-        		<h1>What You'll Find Here</h1>
-        		<p>This is my space. Here are some of my interests: </p>
-				<ul style="margin-top:10px;">
-					<li>My Education</li>
-					<li>My Hobbies</li>
-					<li>My Nativity (my homesoil)</li>
-				</ul>
-			</div>
-	
-	</div>
-			<!--  <div id="right-column">  -->
-			<!-- div id="main-image">
-				<img src="myImage.png" width="200" height="200" title="Rajesh Chittampally" alt="Rajesh image" />
-			</div -->
+	<div id="wrapper">
 
+		<div id="header">
+			<div id="nav"><a href="index.html" class="nav_item">Home</a> | <a href="#aboutme" class="nav_item">About Me</a> | <a href="#my_hobbies" class="nav_item">Hobbies</a> | <a href="#contactme" class="nav_item">Contact Me</a></div>
+			<div id="bg"></div>
+		</div>
 
-			<!-- <div class="sidebar">  -->
+		<div id="top">
+			<div id="main-content">
+			<!-- <div id="left-column"> -->
+				<div id="logo">
+					WELCOME TO RAJESH'S WEBSITE
+				</div>
+				<div class="box">
+					<h1>What You'll Find Here</h1>
+					<p>This is my space. Here are some of my interests: </p>
+					<ul style="margin-top:10px;">
+						<li>My Education</li>
+						<li>My Hobbies</li>
+						<li>My Nativity (my homesoil)</li>
+					</ul>
+				</div>
+
+			</div>
+			
 			<div class="box">
 				<h3>Blurb About Me</h3>
 				<p>My name is <strong>Rajesh Chittampally.</strong>  I am very passionate about coding and exploring new technologies in IT.I love travelling places and have been to many places in India. I always dreamt of becoming a successful IT professional mainly focusing on Full stack development.</p><br>
 			</div>
-				<div id="nav1">
-					<h3>Find Me Elsewhere</h3>
-					<a href="https://www.linkedin.com/in/rajeshchittampally/" target="_blank"><img src="data:image/png;base64,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" alt="linkedin" style="width: 100px; height: 40px;"></a><br>
-					<a href="https://angel.co/rajesh-chittampally" target="_blank"><img src="https://d22wwjbips5bcw.cloudfront.net/assets/shared/AngelList-1f53479b7b3bd75d55d9dd0d396a738b1a6943a7885dcd2fa3e4f1adb048f61e.png" alt="pinterest" style="width: 100px; height: 50px;"></a><br>
-					<a href="https://www.facebook.com/rajesh.chittampally.3" target="_blank"><img src="data:image/png;base64,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"  alt="facebook"  style="width: 100px; height: 50px;"></a><br>
-					<a href="http://twitter.com/rchittampally" target="_blank"><img src="data:image/png;base64,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" alt="twitter" style="width: 100px; height: 30px;"></a><br>				
+			
+		</div>
+		<br><br>
+
+		<div id="aboutme">
+			<div id="main-content">
+			<!-- <div id="left-column"> -->
+				<div id="logo">
+				ABOUT ME
+				</div>
+				<div class="box">
+        			<h1>My Childhood</h1>
+        			<p>I was born and brought up in Hyderabad, the capital of Telangana State, India.</p>
+					<p>My whole schooling, college were done in the same city, Hyderbad</p>
+					<ul>
+						<li><a href="#school">Schooling</a></li>
+						<li><a href="#college">College</a></li>
+						<li><a href="#family">Family</a></li>
+						<li><a href="#friends">Friends</a></li>
+					</ul>
+
+					<img src="./images/rajesh.jpg" style="text-align: center;">
+				</div>
+			</div>
+			<br><br>
+			
+			<div class="box" id="school">
+				<h3>SCHOOLING</h3>
+				<P>Since I am from <em>Hyderabad</em>, my Schooling was done in <mark><b>Arya Bhatta High School,</b> named after the man who invented zero.</mark> I was a good student all through my schooling and I never ever had a signle fight with any other pupils in my school. In the 10<sup>th</sup> Board Examinations, I got a nice percentage and was felicitated by our school management for my good behaviour through out my schooling.  </P>
+				<br>
+				<p>I really miss my school days, my friends and the enjoyment which we used to have at that time was incredible.</p>
+				<br>
+				<p>After finishing 10<sup>th</sup>, I joined in Narayana Junior College, where I studied <em><mark>Intermediate</mark></em> with <strong>MPC</strong> stream.</p>
+			
+			</div><br><br>
+
+			<div id="college" class="box">
+				<h3>COLLEGE</h3>
+
+				<p>I got a decent score in <em><mark>EAMCET</mark>(Engineerign and Medicine Common Admission Test)</em> and a decent rank and got admission in <em>St. Martins Engineering College</em> through convenor quota(Government body will allot seats to students based on their rank in EAMCET and upon their choice of colleges and courses they wish to study).</p><br>
+
+				<h4>MY COLLEGE</h4>
+
+				<img src="./images/smec.jpg" alt="St. Martins Engineering college" title="St. Martins Engineering College" style="width: 400px; height: 300px">
+
+			
+			</div><br><br>
+
+
+			<div id="family" class="box">
+				<h3>FAMILY</h3>
+				<p>I am a family man. I love my family so much. My dad is a businessman, mom is a home-maker, I have a sibling he's doing his Bachelor of Technology and currently is in <strong>3<sup>rd</sup></strong> year.</p><br>
+			
+			</div><br><br>
+
+
+			<div id="friends" class="box">
+				<h3>FRIENDS</h3>
+				<p>I have many friends from my school, Intermediate and Engineering and also from my neighbourhood. But there is one person in who is my favorite, best friend and I would like to share my thoughts with him. He is my best and favorite friend Saketh Jaligama. He is my classmate from Intermediate and also from Malla Reddy Engineering College (Engineering).</p>
+				<br>
+			
+			</div>
+			
+		</div>
+		<br><br>
+
+		<div id="my_hobbies">
+			<div id="main-content">
+			<!-- <div id="left-column"> -->
+				<div id="logo">
+				MY HOBBIES
+				</div>
+				<div class="box">
+	        		<h1>Hobbies</h1>
+    	    		<p>I have number of hobbies. Those listed below are the one's which I will be doing when I get some free time.</p>
+					<ul style="margin-top:10px;">
+						<li><a href="#cricket">Cricket</a></li>
+						<li><a href="#football">Football</a></li>
+						<li><a href="#movies">Movies</a></li>
+						<li><a href="#programming">Programming</a></li>
+						<li><a href="#web">Web Development</a></li>
+					</ul>
+				</div><br>
+				<br><br>
+
+				<div id="cricket" class="box">
+					<h1>Cricket</h1>
+					<p><b>Cricket</b> is the world famous sport and is like a religion when considered in <i><b>India</b></i> especially. No different from others of my age, even I started playing Cricket at a very young age and very soon I became a big fan of the sport. As many people I too dreamt of becoming a cricketer and represent my nation at International level. But that didn't happen.</p><br>
+					<p>But I started to enjoy the sport and get the pleasure by playing it in my free time with my friends, colleagues and when I was in my college, I coached few students from a Government school near my house in Cricket. They were interested in the sport and they got the techniques in the sport very soon. And now they are finding their way in the state cricket board, by playing in various leagues and by proving themselves. </p>
+					<h3>Legends</h3>
+					<img src="./images/sachin.jpg" title="Sachin Tendulkar" style="align: left;  width: 670px; height: 350px;">
+					<img src="./images/dhoni.jpg" id="ms" alt="M S DHONI" style="align: right;" title="M S Dhoni">
 				</div>
 
-	<div id="footer">
-		Copyright &copy; 2017  Rajesh Chittampally. All rights reserved.<br/>
+				<br><br>
+
+				<div id="football" class="box">
+					<h1>Football</h1>
+					<p>After Cricket, the sport which has drawn my attention towards it was Football. Initially I was not interested in it. I used to think that Cricket was the only sport which is the oldest and the most popular sport in the world. But I soon realized that there is another sport which is even more famous and older than Cricket and that is nothing but Football.</p>
+
+			
+				</div>
+				<br><br>
+
+				<div id="movies" class="box">
+					<h1>Movies</h1>
+					<p>I love watching moview. Movies are one of the sources to enjoy and forget all the tensions for that stipulated time and come out of the theatre with a fresh kind of mind. I strongly believe that movies are very important in one's life. I enjoy watching movies with my friends and I am a huge huge fan of Pawan Kalyan, a male lead actor in Tollywood (Telugu Film Industry) of India.</p>
+
+					<h3>My Hero</h3>
+					<img src="./images/pawankalyan.jpg"  alt="Pawan Kalyan" title="Pawan Kalyan">
+
+				</div>
+				<br><br>
+
+				<div id="programming" class="box">
+					<h1>Programming</h1>
+					<p>I got introduced to Computer Science, Information Technology when I entered into College. There I fell in love with programming and used to try to solve a problem in many ways.I used to find and search for any new ways in solving a problem than that of the one which were followed. And in this many times I was not succesful in finding a new way. But once I did. I found a new way in solving a problem in a new way.</p>
+
+					<p>Though the method of mine was a bit more lengthy and complex than the usual one, the feeling and recognition which I received after finding a new method was extraordinary.</p>
+
+				</div>
+				<br><br>
+
+				<div id="web" class="box">
+					<h1>Web Development</h1>
+					<p>Web Development is the area where I never got bored. Because web development is the area which keeps on changing from time to time very quicky. The technology which is present today may not be surpassed by an other technology. And that may be surpassed by other the next day. I love to face that kind of scenarios and in that kind of situations best possible results can be expected.</p>
+
+				</div>
+			</div>
+			
+		</div>
+		<br><br>
+
+		<div id="contactme">
+			<div id="main-content">
+				<!-- <div id="left-column"> -->
+				<div id="logo">
+				CONTACT ME
+				</div>
+				<div class="box">
+	        		<h1>Want to hire me? You can reach me at below Places</h1>
+					<p>You can connect with me on <strong>LinkedIn</strong> at <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="rajeshchittampally" style="text-align: center;"><a class="LI-simple-link" href='https://in.linkedin.com/in/rajeshchittampally?trk=profile-badge'>Rajesh Chittampally</a></div><!-- a href="https://in.linkedin.com/in/rajeshchittampally" LinkedIn --></a></p><br>
+			
+					<p>You can connect with me on <strong>AngelList</strong> at <a href="https://angel.co/rajesh-chittampally">AngelList</a></p><br>
+
+					<p>You can connect with me on <strong>facebook</strong> at <a href="https://www.facebook.com/rajesh.chittampally.3">Facebook</a></p><br>
+
+					<p>You can connect with me on <strong>Twitter</strong> at <a href="https://www.twitter.com/rchittampally">Twitter</a></p><br><br>
+
+					<br><br>
+					<hr>
+					<br>
+					<h2>Connect with me here on &nbsp; &nbsp; &nbsp;<a href="https://plus.google.com/+chittampallyrajesh" target="_blank"><img src="./images/google+.jpg" alt="Google Plus" width="40" height="40" title="Gplus"></a></h2>
+					<br><br>
+					<p style="font-size: 15px;">You can also contact me here, <a href="tel:+91-984-813-4297" style="background-color: lightsalmon; color: black; padding: 2px; font-size: 15px;">+91-98481-34297</a></p>
+
+				</div>
+				<!-- <div class="box" style="align: center" >
+				<h2 style="text-align: center;">Send an EMAIL</h2>
+					<form method="post" action="mailto:chittampallyrajesh@gmail.com" style="padding-left: 0px; padding-right:  10px; ">
+    					<P>
+    					First name: <INPUT type="text" name="firstname" required><br><br>
+    					Last name: <INPUT type="text" name="lastname" required><br><br>
+    					Email: &nbsp; &nbsp;  &nbsp; &nbsp; <INPUT type="text" name="email" required><br><br>
+    					<INPUT type="radio" name="sex" value="Male"> Male<br><br>
+   		 				<INPUT type="radio" name="sex" value="Female"> Female<br><br>
+    					<a href="mailto:chittampallyrajesh@gmail.com"><INPUT type="submit" value="Send"></a> 
+    					<INPUT type="reset">
+    					</P>
+ 					</form -->
+ 			</div>
+			
+		</div>
+
+		<!-- div id="gallery">
+			<div id="main-content">
+				
+				<div id="logo">
+				MY PHOTOS
+				</div>
+				<div class="box">
+        			<ul>
+						<li><a href="#school">My Photos</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<br><br>
+			<div class="box" id="school">
+				<div class="slideshow-container" style="width: 350px; height: 250px;">
+
+					<div class="mySlides fade">
+  						<div class="numbertext">1 / 5</div>
+			  			<img src="myImage.png"  alt="Rajesh Chittampally" title="Rajesh Chittampally" style="width:100%">
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">2 / 5</div>
+  						<img src="fbProfile.jpg" title="Rajesh Chittampally" style="width:100%">
+					</div>
+
+					<div class="mySlides fade">
+  						<div class="numbertext">3 / 5</div>
+				    	<img src="blazerPic.jpg" title="Rajesh Chittampally" style="width:100%">
+					</div>
+
+					<div class="mySlides fade">
+			    		<div class="numbertext">4 / 5</div>
+	  					<img src="onBike.jpg" title="Rajesh Chittampally" style="width:100%">
+					</div>
+
+					<div class="mySlides fade">
+						<div class="numbertext">5 / 5</div>
+						<img src="pic.jpg" title="Rajesh Chittampally" style="width:100%">
+					</div>
+
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				</div>
+			</div>
+			<br>
+
+			<div style="text-align:center">
+  				<span class="dot" onclick="currentSlide(1)"></span> 
+				<span class="dot" onclick="currentSlide(2)"></span> 
+  				<span class="dot" onclick="currentSlide(3)"></span>
+  				<span class="dot" onclick="currentSlide(4)"></span>
+  				<span class="dot" onclick="currentSlide(5)"></span>
+			</div>
+		</div -->
+		<br><br>
+
 		
-	</div>
-</div>  
+		<div id="nav1">
+			<h3>Find Me Elsewhere</h3>
+			<a href="https://www.linkedin.com/in/rajeshchittampally/" target="_blank"><img src="./images/linkedin.png" alt="linkedin" style="width: 100px; height: 40px;"></a><br>
+			<a href="https://angel.co/rajesh-chittampally" target="_blank"><img src="./images/angellist.png" alt="AngelList" style="width: 100px; height: 50px;"></a><br>
+			<a href="https://www.facebook.com/rajesh.chittampally.3" target="_blank"><img src="./images/facebook.png"  alt="Facebook"  style="width: 100px; height: 50px;"></a><br>
+			<a href="http://twitter.com/rchittampally" target="_blank"><img src="./images/twitter.png" alt="twitter" style="width: 100px; height: 30px;"></a><br>				
+		</div>
+
+		<div id="footer">
+			Copyright &copy; 2017  Rajesh Chittampally. All rights reserved.<br/>
+
+		</div>
+	</div>  
+
+	
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+  			showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+  			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+  			var i;
+  			var slides = document.getElementsByClassName("mySlides");
+  			var dots = document.getElementsByClassName("dot");
+  			if (n > slides.length) {slideIndex = 1}    
+  			if (n < 1) {slideIndex = slides.length}
+  			for (i = 0; i < slides.length; i++) {
+      			slides[i].style.display = "none";  
+  			}
+  			for (i = 0; i < dots.length; i++) {
+      			dots[i].className = dots[i].className.replace(" active", "");
+  				slides[slideIndex-1].style.display = "block";  
+ 				dots[slideIndex-1].className += " active";
+			}
+	</script>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-	
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({
+			google_ad_client: "ca-pub-8141045869878494",
+			enable_page_level_ads: true
+		});
+	</script>
+
 </body>
 </html>
